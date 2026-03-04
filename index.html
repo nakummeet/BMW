@@ -5,25 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW</title>
+    <link rel="stylesheet" href="loco.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="minicircale"></div>
     <div id="main">
         <div id="hero">
             <div id="nav">
                 <img src="bmwlogo.svg">
-                
+
                 <h2>menu</h2>
             </div>
             <div id="headind">
-                <h4 class="tagline">The Ultimate Driving Machine</h4>
-                <h1>BMW <span>M SERIES</span></h1>
-                <h5 class="description">Engineered for adrenaline. Designed for dominance.</h5>
-                <h5 class="description">the pinnacle of automotive performance.</h5>
-                <div>
-                    <button class="explorebt"> Explore Models</button>
-                    <button class="bookbt"> Book Test Drive </button>
+                <div class="bounding">
+                    <h4 class="tagline boundingelam">The Ultimate Driving Machine</h4>
+                </div>
+                <div class="bounding">
+                    <h1 class="boundingelam">BMW <span>M SERIES</span></h1>
+                </div>
+                <div class="bounding">
+                    <h5 class="description boundingelam">Engineered for adrenaline. Designed for dominance.</h5>
+                </div>
+                <div class="bounding">
+                    <h5 class="description boundingelam">the pinnacle of automotive performance.</h5>
+                </div>
+                <div class="bounding">
+                    <div class="boundingelam">
+                        <!-- <div class="bouning"></div> -->
+                        <button class="explorebt"> Explore Models</button>
+                        <!-- <div class="bouning"></div> -->
+                        <button class="bookbt"> Book Test Drive </button>
+                    </div>
                 </div>
             </div>
             <div class="herobottom">
@@ -82,10 +96,15 @@
                 </div>
             </div>
             <div class="copyright">
-        <p>© 2024 BMW M GmbH. All rights reserved.</p>
-    </div>
+                <p>© 2024 BMW M GmbH. All rights reserved.</p>
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
