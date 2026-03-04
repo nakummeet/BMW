@@ -1,46 +1,49 @@
+// Locomotive Scroll
 const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
-    smooth: true,
+    smooth: true
 });
 
-function circlemousefolo(xscale, yscale) {
-    window.addEventListener("mousemove", function (dets) {
-        document.querySelector("#minicircale").style.transform =
-            `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
-    });
-}
 
 function minicircalskew() {
 
-    var xscale = 1;
-    var yscale = 1;
+    let xscale = 1;
+    let yscale = 1;
 
-    var xprev = 0;
-    var yprev = 0;
+    let xprev = 0;
+    let yprev = 0;
 
     window.addEventListener("mousemove", function (dets) {
 
-        var xdiff = dets.clientX - xprev;
-        var ydiff = dets.clientY - yprev;
+        let xdiff = dets.clientX - xprev;
+        let ydiff = dets.clientY - yprev;
 
         xprev = dets.clientX;
         yprev = dets.clientY;
 
-        xscale = gsap.utils.clamp(0.8, 1.2, xdiff);
-        yscale = gsap.utils.clamp(0.8, 1.2, ydiff);
+        xscale = gsap.utils.clamp(0.8, 1.2, xdiff * 0.01);
+        yscale = gsap.utils.clamp(0.8, 1.2, ydiff * 0.01);
 
-        document.querySelector("#minicircale").style.transform =
-            `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+        gsap.to("#minicircale", {
+            x: dets.clientX,
+            y: dets.clientY,
+            scaleX: xscale,
+            scaleY: yscale,
+            duration: 0.2,
+            ease: "power2.out"
+        });
     });
 }
 
 minicircalskew();
 
+
+
 function heroanim() {
 
-    var t1 = gsap.timeline();
+    let tl = gsap.timeline();
 
-    t1.from("#nav", {
+    tl.from("#nav", {
         y: -10,
         opacity: 0,
         duration: 1.2,
@@ -53,16 +56,31 @@ function heroanim() {
         stagger: 0.2,
         ease: "expo.out"
     });
+
 }
 
-heroanim(); 
+heroanim();
+
 
 document.querySelectorAll(".elem")
 .forEach(function (elem) {
-    elem.addEventListener("mousemove", function(details){
-        gsap.to(elem.querySelector("img"),{
+
+    elem.addEventListener("mouseenter", function () {
+
+        gsap.to(elem.querySelector("img"), {
             opacity: 1,
-            ease: "power1.out"
-        })
+            duration: 0.3
+        });
+
     });
+
+    elem.addEventListener("mouseleave", function () {
+
+        gsap.to(elem.querySelector("img"), {
+            opacity: 0,
+            duration: 0.3
+        });
+
+    });
+
 });

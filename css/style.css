@@ -44,7 +44,7 @@ body {
     color: #fff;
 
     /* Background Image */
-    background-image: url("bmw.jpg");
+    background-image: url("../images/bmw.jpg");
     /* change image name */
     background-size: cover;
     background-position: center;
