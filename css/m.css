@@ -1,155 +1,143 @@
-/* ================= GLOBAL ================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#000;
-    color:#fff;
-    font-family:"General Sans", Arial, sans-serif;
-    overflow-x:hidden;
+background:#000;
+color:#fff;
+font-family:"General Sans",Arial,sans-serif;
+overflow-x:hidden;
 }
 
 .m2{
-    width:100%;
-    position:relative;
+width:100%;
+position:relative;
 }
 
-
-/* ================= HERO VIDEO ================= */
+/* VIDEO SECTION */
 
 .bmwm2video{
-    width:100%;
-    height:90vh;
-    overflow:hidden;
+width:100%;
+height:85vh;
+overflow:hidden;
 }
 
 .bmwm2video video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
+/* GENERAL SECTION */
 
-/* ================= DRIFT CAR ================= */
-
-.drift-car{
-    position:fixed;
-    top:45%;
-    left:-320px;
-    width:650px;
-    z-index:20;
-    pointer-events:none;
+.section1,
+.section2,
+.section3{
+width:100%;
+padding:120px 8%;
 }
 
-.drift-car img{
-    width:100%;
-    display:block;
+/* FLEX LAYOUT */
+
+.section-content,
+.section-content1{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
 }
 
-
-/* ================= SECTIONS ================= */
-
-.section{
-    width:100%;
-    padding:80px 8%;
-}
-
-.section-content{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:80px;
-}
-
-/* reverse layout */
-
-.section.reverse .section-content{
-    flex-direction:row-reverse;
-}
-
-
-/* ================= IMAGE ================= */
+/* IMAGE */
 
 .car-image{
-    flex:1;
+flex:1;
+display:flex;
+justify-content:center;
 }
 
 .car-image img{
-    width:120%;
-    max-width:none;
+width:100%;
+max-width:700px;
+height:auto;
+object-fit:cover;
 }
 
-
-/* ================= TEXT ================= */
+/* TEXT */
 
 .car-text{
-    flex:1;
-    max-width:520px;
+flex:1;
+max-width:520px;
 }
 
 .section-title{
-    font-size:3rem;
-    margin-bottom:20px;
-    line-height:1.2;
+font-size:3rem;
+line-height:1.2;
+margin-bottom:25px;
 }
 
 .car-text p{
-    font-size:1rem;
-    line-height:1.7;
-    color:#ccc;
-    margin-bottom:18px;
+font-size:1rem;
+line-height:1.8;
+color:#cfcfcf;
+margin-bottom:18px;
 }
 
 .car-text h4{
-    font-size:0.9rem;
-    color:#777;
+font-size:0.9rem;
+color:#888;
+margin-top:10px;
 }
 
+/* ALTERNATE LAYOUT */
 
-/* ================= FOOTER ================= */
+.section2 .section-content{
+flex-direction:row-reverse;
+}
+
+/* COPYRIGHT */
 
 .copyright{
-    width:100%;
-    text-align:center;
-    padding:40px 0;
-    border-top:1px solid #222;
-    margin-top:80px;
+width:100%;
+text-align:center;
+padding:40px 0;
+border-top:1px solid #222;
+margin-top:100px;
 }
 
 .copyright p{
-    font-size:0.9rem;
-    color:#666;
+font-size:0.9rem;
+color:#666;
 }
 
-
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media (max-width:900px){
 
-.section-content{
-    flex-direction:column;
-    text-align:center;
+.section-content,
+.section-content1{
+flex-direction:column;
+text-align:center;
+gap:40px;
 }
 
-.section.reverse .section-content{
-    flex-direction:column;
-}
-
-.car-image img{
-    width:100%;
+.section2 .section-content{
+flex-direction:column;
 }
 
 .section-title{
-    font-size:2rem;
+font-size:2.2rem;
 }
 
-.drift-car{
-    width:420px;
-    top:50%;
+.car-text{
+max-width:100%;
+}
+
+.section1,
+.section2,
+.section3{
+padding:80px 6%;
 }
 
 }

@@ -84,3 +84,72 @@ document.querySelectorAll(".elem")
     });
 
 });
+
+
+document.querySelectorAll(".elem").forEach(function(elem){
+
+    elem.addEventListener("click", function(){
+
+        const link = elem.querySelector("a").getAttribute("href");
+
+        window.location.href = link;
+
+    });
+
+});
+
+
+
+document.querySelector(".explorebt").addEventListener("click", function(){
+
+    const secondSection = document.querySelector("#second");
+
+    scroll.scrollTo(secondSection);
+
+});
+
+
+
+document.querySelector(".circle").addEventListener("click", function(){
+
+    const secondSection = document.querySelector("#second");
+
+    scroll.scrollTo(secondSection);
+
+});
+
+
+document.querySelector(".dealer").addEventListener("click", function(){
+
+    window.open("https://www.bmw.in/en/dealer-locator.html", "_blank");
+
+});
+
+
+
+document.querySelector(".drive").addEventListener("click", function(){
+
+    window.open("https://www.bmw-m.com/en/topics/all-models.html", "_blank");
+
+});
+gsap.utils.toArray("button").forEach(btn => {
+
+btn.addEventListener("mouseenter", () => {
+
+gsap.to(btn,{
+scale:1.05,
+duration:0.3
+});
+
+});
+
+btn.addEventListener("mouseleave", () => {
+
+gsap.to(btn,{
+scale:1,
+duration:0.3
+});
+
+});
+
+});
