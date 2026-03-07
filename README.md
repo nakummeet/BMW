@@ -96,6 +96,13 @@ Used for smooth scrolling effects.
 ```bash
 https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js
 ```
+# 🖼️ Screenshort 
+<img width="1920" height="1080" alt="Screenshot 2026-03-08 014914" src="https://github.com/user-attachments/assets/bdb18604-7e51-474d-a3cb-62c06729f660" />
+<img width="1920" height="1080" alt="Screenshot 2026-03-08 014929" src="https://github.com/user-attachments/assets/e256dd5d-b4c3-471c-b0f0-38040b12ec2f" />
+<img width="1920" height="1080" alt="Screenshot 2026-03-08 015037" src="https://github.com/user-attachments/assets/1cc5160d-dfcb-4391-b13a-76367cdd1a11" />
+<img width="1920" height="1080" alt="Screenshot 2026-03-08 015014" src="https://github.com/user-attachments/assets/03452ebc-a054-4aff-9001-90d4ce4103ec" />
+---
+
 # 🧠 Learning Goals
 This project helped practice:
 
